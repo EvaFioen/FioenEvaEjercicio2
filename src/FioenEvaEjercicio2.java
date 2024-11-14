@@ -28,5 +28,25 @@ public class FioenEvaEjercicio2 {
                 }
             }
         }
+        String duplicarPatron = patron.repeat(tamanoPatron);
+        String[][] patronParaAjedrez = new String[tamanoPatron][tamanoPatron];
+
+        for (int i = 0; i < patronParaAjedrez.length; i++) {
+            for (int j = 0; j < patronParaAjedrez[i].length; j++) {
+                System.out.println(duplicarPatron);
+            }
+            System.out.println();
+        }
     }
 }
+
+/*
+        char [][] ajedrez = new char[8][8];
+
+        for (int i = 0; i < ajedrez.length; i++) {
+            for (int j = 0; j < ajedrez[i].length; j++) {
+                System.out.print(patronParaAjedrez + " ");
+            }
+            System.out.println();
+
+ */
