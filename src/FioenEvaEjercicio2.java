@@ -26,27 +26,36 @@ public class FioenEvaEjercicio2 {
                 } else {
                     System.out.println("That number is too big or too small. Try again.");
                 }
-            }
-        }
-        String duplicarPatron = patron.repeat(tamanoPatron);
-        String[][] patronParaAjedrez = new String[tamanoPatron][tamanoPatron];
+            } else {
+                System.out.println("That is incorrect. Try again.");
+                input.next();
 
-        for (int i = 0; i < patronParaAjedrez.length; i++) {
-            for (int j = 0; j < patronParaAjedrez[i].length; j++) {
-                System.out.println(duplicarPatron);
             }
-            System.out.println();
         }
+        for (int i = 0; i < 8 * tamanoPatron; i++) {
+            if (i % tamanoPatron == 0) {
+                for (int j = 0; j < (8 * tamanoPatron) + 9; j++) {
+                    System.out.print("-");
+                }
+                System.out.println();
+            }
+
+            for (int j = 0; j < 8 * tamanoPatron; j++) {
+                if (j % tamanoPatron == 0) {
+                    System.out.print("|");
+                }
+                if ((i / tamanoPatron + j / tamanoPatron) % 2 == 0) {
+                    System.out.print(patron);
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println("|");
+        }
+
+        for (int j = 0; j < (8 * tamanoPatron) + 9; j++) {
+            System.out.print("-");
+        }
+        System.out.println();
     }
 }
-
-/*
-        char [][] ajedrez = new char[8][8];
-
-        for (int i = 0; i < ajedrez.length; i++) {
-            for (int j = 0; j < ajedrez[i].length; j++) {
-                System.out.print(patronParaAjedrez + " ");
-            }
-            System.out.println();
-
- */
