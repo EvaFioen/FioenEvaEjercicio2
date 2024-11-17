@@ -8,4 +8,4 @@ To continue improving the chess board, I would also like to include a part where
 
 I'm open for any improvements or ideas to make the chess board look better.
 
-Thank you!
+Thank you! 
