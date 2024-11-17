@@ -12,7 +12,7 @@ public class FioenEvaEjercicio2 {
         // Solicitar el caracter donde el usuario solo puedo poner 1 numero, letra o simbolo
         System.out.println("Welcome! We will personalize your chess board however you like.  ");
         while (patron.length() != 1) {
-            System.out.println("Enter  1 letter, symbol or letter to make the pattern");
+            System.out.println("Enter  1 letter, symbol or letter to make the pattern.");
             patron = input.nextLine();
             if (patron.length() == 1) {
                 System.out.println("You have chosen the character " + patron);
@@ -30,12 +30,13 @@ public class FioenEvaEjercicio2 {
                 } else {
                     System.out.println("That number is too big or too small. Try again.");
                 }
-            } else {
+            } else { // si el usuario no da un numero, se vuelve a preguntar.
                 System.out.println("That is incorrect. Try again.");
                 input.next();
             }
         }
         // Construir el ajedrez con la información dado por el usuario
+        System.out.println("Here is your personalized chess board:");
         for (int i = 0; i < 8 * tamanoPatron; i++) {
             if (i % tamanoPatron == 0) {
                 for (int j = 0; j < (8 * tamanoPatron) + 9; j++) {
@@ -59,5 +60,6 @@ public class FioenEvaEjercicio2 {
             System.out.print("-");
         }
         System.out.println();
+    System.out.println("Come again soon!"); // se acaba el programa
     }
 }
